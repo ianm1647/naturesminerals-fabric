@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "naturesminerals",
+  "version": "${version}",
+
+  "name": "Nature's Minerals",
+  "description": "Adds 4 new resources, a single alloy, and more to your Alloy Forgery experience!",
+  "authors": [
+    "ianm1647"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/naturesminerals/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.ianm1647.naturesminerals.NaturesMinerals"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": "~1.18.2",
+    "java": ">=17",
+    "alloy_forgery": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
