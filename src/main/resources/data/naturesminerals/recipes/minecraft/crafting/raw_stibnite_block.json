@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "naturesminerals:raw_stibnite"
+    }
+  },
+  "result": {
+    "item": "naturesminerals:raw_stibnite_block"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "naturesminerals:raw_kunzite"
+    }
+  },
+  "result": {
+    "item": "naturesminerals:raw_kunzite_block"
+  }
+}

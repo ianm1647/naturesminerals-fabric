@@ -1,0 +1,20 @@
+{
+  "type": "alloy_forgery:forging",
+  "inputs": [
+    {
+      "tag": "c:ores/stibnite"
+    }
+  ],
+  "output": {
+    "id": "naturesminerals:stibnite_ingot",
+    "count": 2
+  },
+  "overrides": {
+    "5+": {
+      "id": "naturesminerals:stibnite_ingot",
+      "count": 4
+    }
+  },
+  "min_forge_tier": 4,
+  "fuel_per_tick": 400
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "naturesminerals:kunzite_ingot"
+    }
+  ],
+  "result": {
+    "item": "naturesminerals:kunzite_nugget",
+    "count": 9
+  }
+}

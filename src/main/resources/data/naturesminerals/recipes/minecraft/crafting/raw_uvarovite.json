@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "naturesminerals:raw_uvarovite_block"
+    }
+  ],
+  "result": {
+    "item": "naturesminerals:raw_uvarovite",
+    "count": 9
+  }
+}

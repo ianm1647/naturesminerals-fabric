@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "naturesminerals:uvarovite_ingot"
+    }
+  },
+  "result": {
+    "item": "naturesminerals:uvarovite_block"
+  }
+}

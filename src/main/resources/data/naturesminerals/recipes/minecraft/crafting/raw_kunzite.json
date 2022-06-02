@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "naturesminerals:raw_kunzite_block"
+    }
+  ],
+  "result": {
+    "item": "naturesminerals:raw_kunzite",
+    "count": 9
+  }
+}

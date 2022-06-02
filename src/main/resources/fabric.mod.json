@@ -4,13 +4,13 @@
   "version": "${version}",
 
   "name": "Nature's Minerals",
-  "description": "Adds 4 new resources, a single alloy, and more to your Alloy Forgery experience!",
+  "description": "Adds 4 new resources, a new alloy, and more to your Alloy Forgery experience!",
   "authors": [
     "ianm1647"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/natures-minerals",
+    "sources": "https://github.com/ianm1647/naturesminerals-fabric"
   },
 
   "license": "MIT",
@@ -31,6 +31,5 @@
     "alloy_forgery": "*"
   },
   "suggests": {
-    "another-mod": "*"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "type": "alloy_forgery:forging",
+  "inputs": [
+    {
+      "item": "naturesminerals:raw_uvarovite"
+    },
+    {
+      "item": "naturesminerals:raw_uvarovite"
+    }
+  ],
+  "output": {
+    "id": "naturesminerals:uvarovite_ingot",
+    "count": 3
+  },
+  "overrides": {
+    "4+": {
+      "id": "naturesminerals:uvarovite_ingot",
+      "count": 4
+    }
+  },
+  "min_forge_tier": 3,
+  "fuel_per_tick": 300
+}

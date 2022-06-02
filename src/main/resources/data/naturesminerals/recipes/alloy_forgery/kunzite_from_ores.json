@@ -1,0 +1,20 @@
+{
+  "type": "alloy_forgery:forging",
+  "inputs": [
+    {
+      "tag": "c:ores/kunzite"
+    }
+  ],
+  "output": {
+    "id": "naturesminerals:kunzite_ingot",
+    "count": 2
+  },
+  "overrides": {
+    "4+": {
+      "id": "naturesminerals:kunzite_ingot",
+      "count": 4
+    }
+  },
+  "min_forge_tier": 3,
+  "fuel_per_tick": 350
+}

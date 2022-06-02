@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "naturesminerals:astrite_ingot"
+    }
+  ],
+  "result": {
+    "item": "naturesminerals:astrite_nugget",
+    "count": 9
+  }
+}

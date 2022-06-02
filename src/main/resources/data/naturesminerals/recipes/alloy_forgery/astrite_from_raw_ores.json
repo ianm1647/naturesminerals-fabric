@@ -1,0 +1,23 @@
+{
+  "type": "alloy_forgery:forging",
+  "inputs": [
+    {
+      "item": "naturesminerals:raw_astrite"
+    },
+    {
+      "item": "naturesminerals:raw_astrite"
+    }
+  ],
+  "output": {
+    "id": "naturesminerals:astrite_ingot",
+    "count": 3
+  },
+  "overrides": {
+    "5+": {
+      "id": "naturesminerals:astrite_ingot",
+      "count": 4
+    }
+  },
+  "min_forge_tier": 4,
+  "fuel_per_tick": 500
+}

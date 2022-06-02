@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "naturesminerals:uvarovite_ore",
+    "naturesminerals:deepslate_uvarovite_ore",
+    "naturesminerals:uvarovite_block",
+    "naturesminerals:kunzite_ore",
+    "naturesminerals:deepslate_kunzite_ore",
+    "naturesminerals:kunzite_block",
+    "naturesminerals:stibnite_ore",
+    "naturesminerals:stibnite_block",
+    "naturesminerals:astrite_ore",
+    "naturesminerals:astrite_block",
+    "naturesminerals:thounite_block"
+  ]
+}
