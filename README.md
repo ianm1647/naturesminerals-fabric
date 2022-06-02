@@ -1,9 +1,4 @@
-# Fabric Example Mod
+<p align="center"><img src="https://i.ibb.co/NsKZSsN/natures-minerals.png" alt="Logo" width="400"></p>
 
-## Setup
-
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+<h4 align="center"> The mod is available on CurseForge!</p>
+<p align="center"><a href="https://www.curseforge.com/minecraft/mc-mods/natures-minerals"><img src="https://i.ibb.co/fDHvmnz/logo-4x33v.png" alt="logo-4x33v" border="0"></a></p>
