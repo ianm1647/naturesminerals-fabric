@@ -8,6 +8,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
 public class ModSwordItem extends SwordItem {
@@ -35,15 +36,17 @@ public class ModSwordItem extends SwordItem {
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (entity instanceof PlayerEntity) {
-            if (stack.isOf(ItemList.ASTRITE_SWORD)) {
+            Hand hand = ((PlayerEntity) entity).getActiveHand();
+            ItemStack mainStack = ((PlayerEntity) entity).getStackInHand(hand);
+            if (mainStack.isOf(ItemList.ASTRITE_SWORD)) {
                 ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 0, 1, false, false, false));
             }
-            if (stack.isOf(ItemList.STIBNITE_SWORD)) {
+            if (mainStack.isOf(ItemList.STIBNITE_SWORD)) {
                 if (world.getDimension().isUltrawarm()) {
                     ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 0, 2, false, false, false));
                 }
             }
-            if (stack.isOf(ItemList.THOUNITE_SWORD)) {
+            if (mainStack.isOf(ItemList.THOUNITE_SWORD)) {
                 if (world.isThundering()) {
                     ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 0, 3, false, false, false));
                 }

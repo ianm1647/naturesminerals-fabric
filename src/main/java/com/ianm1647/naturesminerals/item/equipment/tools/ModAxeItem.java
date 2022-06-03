@@ -8,6 +8,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
 public class ModAxeItem extends AxeItem {
@@ -35,24 +36,26 @@ public class ModAxeItem extends AxeItem {
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (entity instanceof PlayerEntity) {
-            if (stack.isOf(ItemList.ASTRITE_AXE)) {
+            Hand hand = ((PlayerEntity) entity).getActiveHand();
+            ItemStack mainStack = ((PlayerEntity) entity).getStackInHand(hand);
+            if (mainStack.isOf(ItemList.ASTRITE_AXE)) {
                 if (entity.isSneaking()) {
                     ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 0, 2, false, false, false));
                 }
                 ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 0, 1, false, false, false));
             }
-            if (stack.isOf(ItemList.THOUNITE_AXE)) {
+            if (mainStack.isOf(ItemList.THOUNITE_AXE)) {
                 if (world.isThundering()) {
                     ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 0, 3, false, false, false));
                 }
             }
-            if (stack.isOf(ItemList.STIBNITE_AXE)) {
+            if (mainStack.isOf(ItemList.STIBNITE_AXE)) {
                 if (world.getDimension().isUltrawarm()) {
                     ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 0, 1, false, false, false));
                     ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 0, 2, false, false, false));
                 }
             }
-            if (stack.isOf(ItemList.THOUNITE_AXE)) {
+            if (mainStack.isOf(ItemList.THOUNITE_AXE)) {
                 if (world.isThundering()) {
                     ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 0, 3, false, false, false));
                 }
