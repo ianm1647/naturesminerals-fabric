@@ -19,10 +19,11 @@ public class ModSwordItem extends SwordItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        World world = target.getWorld();
         if (stack.isOf(ItemList.THOUNITE_SWORD)) {
             LightningEntity lightning = EntityType.LIGHTNING_BOLT.create(target.getWorld());
             lightning.move(MovementType.SELF, target.getPos());
-            target.getWorld().spawnEntity(lightning);
+            world.spawnEntity(lightning);
         }
         if (stack.isOf(ItemList.UVAROVITE_SWORD)) {
             target.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 800, 0));

@@ -16,8 +16,8 @@ public class OreGeneration {
     public static void generateFeature() {
         generateOre(BiomeSelectors.categories(Biome.Category.DESERT), FeatureList.UVAROVITE_ORE_PLACED.getKey().get());
         generateOre(BiomeSelectors.categories(Biome.Category.SAVANNA), FeatureList.KUNZITE_ORE_PLACED.getKey().get());
-        generateOre(BiomeSelectors.foundInTheNether(), FeatureList.STIBNITE_ORE_PLACED.getKey().get());
-        generateOre(BiomeSelectors.foundInTheEnd(), FeatureList.ASTRITE_ORE_PLACED.getKey().get());
+        generateOre(BiomeSelectors.categories(Biome.Category.NETHER), FeatureList.STIBNITE_ORE_PLACED.getKey().get());
+        generateOre(BiomeSelectors.categories(Biome.Category.THEEND), FeatureList.ASTRITE_ORE_PLACED.getKey().get());
 
     }
 

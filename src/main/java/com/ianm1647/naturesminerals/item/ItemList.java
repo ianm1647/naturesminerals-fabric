@@ -32,6 +32,9 @@ public class ItemList {
     public static Item UVAROVITE_PICKAXE;
     public static Item UVAROVITE_AXE;
     public static Item UVAROVITE_HOE;
+    public static Item UVAROVITE_HAMMER;
+    public static Item UVAROVITE_EXCAVATOR;
+    public static Item UVAROVITE_PAXEL;
     public static Item UVAROVITE_KNIFE;
 
     public static Item KUNZITE_SWORD;
@@ -39,6 +42,9 @@ public class ItemList {
     public static Item KUNZITE_PICKAXE;
     public static Item KUNZITE_AXE;
     public static Item KUNZITE_HOE;
+    public static Item KUNZITE_HAMMER;
+    public static Item KUNZITE_EXCAVATOR;
+    public static Item KUNZITE_PAXEL;
     public static Item KUNZITE_KNIFE;
 
     public static Item STIBNITE_SWORD;
@@ -46,6 +52,9 @@ public class ItemList {
     public static Item STIBNITE_PICKAXE;
     public static Item STIBNITE_AXE;
     public static Item STIBNITE_HOE;
+    public static Item STIBNITE_HAMMER;
+    public static Item STIBNITE_EXCAVATOR;
+    public static Item STIBNITE_PAXEL;
     public static Item STIBNITE_KNIFE;
 
     public static Item ASTRITE_SWORD;
@@ -53,6 +62,9 @@ public class ItemList {
     public static Item ASTRITE_PICKAXE;
     public static Item ASTRITE_AXE;
     public static Item ASTRITE_HOE;
+    public static Item ASTRITE_HAMMER;
+    public static Item ASTRITE_EXCAVATOR;
+    public static Item ASTRITE_PAXEL;
     public static Item ASTRITE_KNIFE;
 
     public static Item THOUNITE_SWORD;
@@ -60,6 +72,9 @@ public class ItemList {
     public static Item THOUNITE_PICKAXE;
     public static Item THOUNITE_AXE;
     public static Item THOUNITE_HOE;
+    public static Item THOUNITE_HAMMER;
+    public static Item THOUNITE_EXCAVATOR;
+    public static Item THOUNITE_PAXEL;
     public static Item THOUNITE_KNIFE;
 
     public static Item UVAROVITE_HEAD;

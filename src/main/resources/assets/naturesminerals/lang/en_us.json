@@ -27,6 +27,9 @@
   "item.naturesminerals.uvarovite_pickaxe": "Uvarovite Pickaxe",
   "item.naturesminerals.uvarovite_axe": "Uvarovite Axe",
   "item.naturesminerals.uvarovite_hoe": "Uvarovite Hoe",
+  "item.naturesminerals.uvarovite_hammer": "Uvarovite Hammer",
+  "item.naturesminerals.uvarovite_excavator": "Uvarovite Excavator",
+  "item.naturesminerals.uvarovite_paxel": "Uvarovite Paxel",
   "item.naturesminerals.uvarovite_knife": "Uvarovite Knife",
 
   "item.naturesminerals.kunzite_sword": "Kunzite Sword",
@@ -34,6 +37,9 @@
   "item.naturesminerals.kunzite_pickaxe": "Kunzite Pickaxe",
   "item.naturesminerals.kunzite_axe": "Kunzite Axe",
   "item.naturesminerals.kunzite_hoe": "Kunzite Hoe",
+  "item.naturesminerals.kunzite_hammer": "Kunzite Hammer",
+  "item.naturesminerals.kunzite_excavator": "Kunzite Excavator",
+  "item.naturesminerals.kunzite_paxel": "Kunzite Paxel",
   "item.naturesminerals.kunzite_knife": "Kunzite Knife",
 
   "item.naturesminerals.stibnite_sword": "Stibnite Sword",
@@ -41,6 +47,9 @@
   "item.naturesminerals.stibnite_pickaxe": "Stibnite Pickaxe",
   "item.naturesminerals.stibnite_axe": "Stibnite Axe",
   "item.naturesminerals.stibnite_hoe": "Stibnite Hoe",
+  "item.naturesminerals.stibnite_hammer": "Stibnite Hammer",
+  "item.naturesminerals.stibnite_excavator": "Stibnite Excavator",
+  "item.naturesminerals.stibnite_paxel": "Stibnite Paxel",
   "item.naturesminerals.stibnite_knife": "Stibnite Knife",
 
   "item.naturesminerals.astrite_sword": "Astrite Sword",
@@ -48,6 +57,9 @@
   "item.naturesminerals.astrite_pickaxe": "Astrite Pickaxe",
   "item.naturesminerals.astrite_axe": "Astrite Axe",
   "item.naturesminerals.astrite_hoe": "Astrite Hoe",
+  "item.naturesminerals.astrite_hammer": "Astrite Hammer",
+  "item.naturesminerals.astrite_excavator": "Astrite Excavator",
+  "item.naturesminerals.astrite_paxel": "Astrite Paxel",
   "item.naturesminerals.astrite_knife": "Astrite Knife",
 
   "item.naturesminerals.thounite_sword": "Thounite Sword",
@@ -55,6 +67,9 @@
   "item.naturesminerals.thounite_pickaxe": "Thounite Pickaxe",
   "item.naturesminerals.thounite_axe": "Thounite Axe",
   "item.naturesminerals.thounite_hoe": "Thounite Hoe",
+  "item.naturesminerals.thounite_hammer": "Thounite Hammer",
+  "item.naturesminerals.thounite_excavator": "Thounite Excavator",
+  "item.naturesminerals.thounite_paxel": "Thounite Paxel",
   "item.naturesminerals.thounite_knife": "Thounite Knife",
 
   "item.naturesminerals.uvarovite_head": "Uvarovite Helmet",

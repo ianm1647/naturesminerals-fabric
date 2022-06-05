@@ -20,6 +20,7 @@ public enum NaturesToolMaterials implements ToolMaterial {
     THOUNITE(9, 5000, 14.0F, 12.0F, 25,
             () -> Ingredient.ofItems(new ItemConvertible[]{ItemList.THOUNITE_INGOT}));
 
+
     private final int miningLevel;
     private final int itemDurability;
     private final float miningSpeed;
