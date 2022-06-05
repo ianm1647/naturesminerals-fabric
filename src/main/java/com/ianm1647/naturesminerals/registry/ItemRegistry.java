@@ -6,8 +6,6 @@ import com.ianm1647.naturesminerals.item.ItemList;
 import com.ianm1647.naturesminerals.item.equipment.NaturesArmorMaterials;
 import com.ianm1647.naturesminerals.item.equipment.NaturesToolMaterials;
 import com.ianm1647.naturesminerals.item.equipment.tools.*;
-import com.nhoryzon.mc.farmersdelight.item.KnifeItem;
-import draylar.magna.Magna;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.entity.EquipmentSlot;
@@ -81,28 +79,38 @@ public class ItemRegistry {
 
         if (FabricLoader.getInstance().isModLoaded("vanilla-hammers")) {
             ItemList.UVAROVITE_HAMMER = hammerItem("uvarovite_hammer", NaturesToolMaterials.UVAROVITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP).maxDamage(NaturesToolMaterials.UVAROVITE.getDurability() * 5));
+                    new FabricItemSettings().group(NaturesMinerals.GROUP)
+                            .maxDamage(NaturesToolMaterials.UVAROVITE.getDurability() * NaturesMinerals.CONFIG.durabilityMultiplier));
             ItemList.KUNZITE_HAMMER = hammerItem("kunzite_hammer", NaturesToolMaterials.KUNZITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP).maxDamage(NaturesToolMaterials.KUNZITE.getDurability() * 5));
+                    new FabricItemSettings().group(NaturesMinerals.GROUP)
+                            .maxDamage(NaturesToolMaterials.KUNZITE.getDurability() * NaturesMinerals.CONFIG.durabilityMultiplier));
             ItemList.STIBNITE_HAMMER = hammerItem("stibnite_hammer", NaturesToolMaterials.STIBNITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP).maxDamage(NaturesToolMaterials.STIBNITE.getDurability() * 5));
+                    new FabricItemSettings().group(NaturesMinerals.GROUP)
+                            .maxDamage(NaturesToolMaterials.STIBNITE.getDurability() * NaturesMinerals.CONFIG.durabilityMultiplier));
             ItemList.ASTRITE_HAMMER = hammerItem("astrite_hammer", NaturesToolMaterials.ASTRITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP).maxDamage(NaturesToolMaterials.ASTRITE.getDurability() * 5));
+                    new FabricItemSettings().group(NaturesMinerals.GROUP)
+                            .maxDamage(NaturesToolMaterials.ASTRITE.getDurability() * NaturesMinerals.CONFIG.durabilityMultiplier));
             ItemList.THOUNITE_HAMMER = hammerItem("thounite_hammer", NaturesToolMaterials.THOUNITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP).maxDamage(NaturesToolMaterials.THOUNITE.getDurability() * 5));
+                    new FabricItemSettings().group(NaturesMinerals.GROUP)
+                            .maxDamage(NaturesToolMaterials.THOUNITE.getDurability() * NaturesMinerals.CONFIG.durabilityMultiplier));
         }
 
         if (FabricLoader.getInstance().isModLoaded("vanillaexcavators")) {
             ItemList.UVAROVITE_EXCAVATOR = excavatorItem("uvarovite_excavator", NaturesToolMaterials.UVAROVITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP).maxDamage(NaturesToolMaterials.UVAROVITE.getDurability() * 5));
+                    new FabricItemSettings().group(NaturesMinerals.GROUP)
+                            .maxDamage(NaturesToolMaterials.UVAROVITE.getDurability() * NaturesMinerals.CONFIG.durabilityMultiplier));
             ItemList.KUNZITE_EXCAVATOR = excavatorItem("kunzite_excavator", NaturesToolMaterials.KUNZITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP).maxDamage(NaturesToolMaterials.KUNZITE.getDurability() * 5));
+                    new FabricItemSettings().group(NaturesMinerals.GROUP)
+                            .maxDamage(NaturesToolMaterials.KUNZITE.getDurability() * NaturesMinerals.CONFIG.durabilityMultiplier));
             ItemList.STIBNITE_EXCAVATOR = excavatorItem("stibnite_excavator", NaturesToolMaterials.STIBNITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP).maxDamage(NaturesToolMaterials.STIBNITE.getDurability() * 5));
+                    new FabricItemSettings().group(NaturesMinerals.GROUP)
+                            .maxDamage(NaturesToolMaterials.STIBNITE.getDurability() * NaturesMinerals.CONFIG.durabilityMultiplier));
             ItemList.ASTRITE_EXCAVATOR = excavatorItem("astrite_excavator", NaturesToolMaterials.ASTRITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP).maxDamage(NaturesToolMaterials.ASTRITE.getDurability() * 5));
+                    new FabricItemSettings().group(NaturesMinerals.GROUP)
+                            .maxDamage(NaturesToolMaterials.ASTRITE.getDurability() * NaturesMinerals.CONFIG.durabilityMultiplier));
             ItemList.THOUNITE_EXCAVATOR = excavatorItem("thounite_excavator", NaturesToolMaterials.THOUNITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP).maxDamage(NaturesToolMaterials.THOUNITE.getDurability() * 5));
+                    new FabricItemSettings().group(NaturesMinerals.GROUP)
+                            .maxDamage(NaturesToolMaterials.THOUNITE.getDurability() * NaturesMinerals.CONFIG.durabilityMultiplier));
         }
 
         if (FabricLoader.getInstance().isModLoaded("adapaxels")) {
