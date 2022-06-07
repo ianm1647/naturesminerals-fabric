@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aps",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "a": {
+      "item": "naturesminerals:stibnite_axe"
+    },
+    "p": {
+      "item": "naturesminerals:stibnite_pickaxe"
+    },
+    "s": {
+      "item": "naturesminerals:stibnite_shovel"
+    }
+  },
+  "result": {
+    "item": "naturesminerals:stibnite_paxel"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:any_mod_loaded",
+      "values": [
+        "adapaxels"
+      ]
+    }
+  ]
+}

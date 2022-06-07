@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aps",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "a": {
+      "item": "naturesminerals:uvarovite_axe"
+    },
+    "p": {
+      "item": "naturesminerals:uvarovite_pickaxe"
+    },
+    "s": {
+      "item": "naturesminerals:uvarovite_shovel"
+    }
+  },
+  "result": {
+    "item": "naturesminerals:uvarovite_paxel"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:any_mod_loaded",
+      "values": [
+        "adapaxels"
+      ]
+    }
+  ]
+}
