@@ -77,6 +77,8 @@ public class ItemRegistry {
             ItemList.THOUNITE_KNIFE = knifeItem("thounite", NaturesToolMaterials.THOUNITE);
         }
 
+        /*
+
         if (FabricLoader.getInstance().isModLoaded("vanilla-hammers")) {
             ItemList.UVAROVITE_HAMMER = hammerItem("uvarovite", NaturesToolMaterials.UVAROVITE,
                     new FabricItemSettings().group(NaturesMinerals.GROUP)
@@ -112,6 +114,8 @@ public class ItemRegistry {
                     new FabricItemSettings().group(NaturesMinerals.GROUP)
                             .maxDamage(NaturesToolMaterials.THOUNITE.getDurability() * NaturesMinerals.CONFIG.durabilityMultiplier));
         }
+
+        */
 
         if (FabricLoader.getInstance().isModLoaded("adapaxels")) {
             ItemList.UVAROVITE_PAXEL = paxelItem("uvarovite", NaturesToolMaterials.UVAROVITE);

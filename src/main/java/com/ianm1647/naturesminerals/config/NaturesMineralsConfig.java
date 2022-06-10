@@ -1,6 +1,5 @@
 package com.ianm1647.naturesminerals.config;
 
-
 import draylar.omegaconfig.api.Comment;
 import draylar.omegaconfig.api.Config;
 

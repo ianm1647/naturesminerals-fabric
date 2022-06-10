@@ -1,8 +1,8 @@
 package com.ianm1647.naturesminerals.item.equipment.tools;
 
+//import com.brand.adapaxels.paxels.base.PaxelItem;
 import com.brand.adapaxels.paxels.base.PaxelItem;
 import com.ianm1647.naturesminerals.item.ItemList;
-import draylar.magna.item.ExcavatorItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -35,7 +35,7 @@ public class ModPaxelItem extends PaxelItem {
                 }
             }
             if (mainStack.isOf(ItemList.STIBNITE_PAXEL)) {
-                if (world.getDimension().isUltrawarm()) {
+                if (world.getDimension().ultrawarm()) {
                     ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 0, 1, false, false, false));
                 }
             }

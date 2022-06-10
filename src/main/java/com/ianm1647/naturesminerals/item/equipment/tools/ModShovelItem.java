@@ -34,7 +34,7 @@ public class ModShovelItem extends ShovelItem {
                 }
             }
             if (mainStack.isOf(ItemList.STIBNITE_SHOVEL)) {
-                if (world.getDimension().isUltrawarm()) {
+                if (world.getDimension().ultrawarm()) {
                     ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 0, 1, false, false, false));
                 }
             }

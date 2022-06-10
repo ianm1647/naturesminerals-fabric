@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
 public class NaturesMinerals implements ModInitializer {
 	public static final String MODID = "naturesminerals";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
-	public static NaturesMineralsConfig CONFIG = OmegaConfig.register(NaturesMineralsConfig.class);
+	//public static NaturesMineralsConfig CONFIG = OmegaConfig.register(NaturesMineralsConfig.class);
 	public static final ItemGroup GROUP = FabricItemGroupBuilder.build(new Identifier(MODID, "group"), () -> new ItemStack(ItemList.KUNZITE_INGOT));
 
 	@Override

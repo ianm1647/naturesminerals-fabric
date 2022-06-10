@@ -43,7 +43,7 @@ public class ModSwordItem extends SwordItem {
                 ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 0, 1, false, false, false));
             }
             if (mainStack.isOf(ItemList.STIBNITE_SWORD)) {
-                if (world.getDimension().isUltrawarm()) {
+                if (world.getDimension().ultrawarm()) {
                     ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 0, 2, false, false, false));
                 }
             }

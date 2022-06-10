@@ -34,7 +34,7 @@ public class ModPickaxeItem extends PickaxeItem {
                 }
             }
             if (mainStack.isOf(ItemList.STIBNITE_PICKAXE)) {
-                if (world.getDimension().isUltrawarm()) {
+                if (world.getDimension().ultrawarm()) {
                     ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 0, 1, false, false, false));
                 }
             }

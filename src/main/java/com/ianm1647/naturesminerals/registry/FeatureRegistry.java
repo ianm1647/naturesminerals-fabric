@@ -6,7 +6,6 @@ import com.ianm1647.naturesminerals.config.NaturesMineralsConfig;
 import com.ianm1647.naturesminerals.world.OreGeneration;
 import com.ianm1647.naturesminerals.world.feature.FeatureList;
 import com.ianm1647.naturesminerals.world.feature.ModOreFeature;
-import dev.architectury.event.events.common.BlockEvent;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
@@ -19,25 +18,25 @@ import java.util.List;
 
 public class FeatureRegistry {
 
-    private static int UVARMAX = NaturesMinerals.CONFIG.uvaroviteMaxHeight;
-    private static int UVARMIN = NaturesMinerals.CONFIG.uvaroviteMinHeight;
-    private static int UVARVEIN = NaturesMinerals.CONFIG.uvaroviteVeinSize;
-    private static int UVARCHUNK = NaturesMinerals.CONFIG.uvaroviteVeinsPerChunk;
+    private static int UVARMAX = 20; //NaturesMinerals.CONFIG.uvaroviteMaxHeight;//20
+    private static int UVARMIN = -20; //NaturesMinerals.CONFIG.uvaroviteMinHeight; //-20
+    private static int UVARVEIN = 5; //NaturesMinerals.CONFIG.uvaroviteVeinSize; //5
+    private static int UVARCHUNK = 8; //NaturesMinerals.CONFIG.uvaroviteVeinsPerChunk; //8
 
-    private static int KUNZITEMAX = NaturesMinerals.CONFIG.kunziteMaxHeight;
-    private static int KUNZITEMIN = NaturesMinerals.CONFIG.kunziteMinHeight;
-    private static int KUNZITEVEIN = NaturesMinerals.CONFIG.kunziteVeinSize;
-    private static int KUNZITECHUNK = NaturesMinerals.CONFIG.kunziteVeinsPerChunk;
+    private static int KUNZITEMAX = -20; //NaturesMinerals.CONFIG.kunziteMaxHeight; //-20
+    private static int KUNZITEMIN = -60; //NaturesMinerals.CONFIG.kunziteMinHeight; //-60
+    private static int KUNZITEVEIN = 4; //NaturesMinerals.CONFIG.kunziteVeinSize; //4
+    private static int KUNZITECHUNK = 5; //NaturesMinerals.CONFIG.kunziteVeinsPerChunk; //5
 
-    private static int STIBNITEMAX = NaturesMinerals.CONFIG.stibniteMaxHeight;
-    private static int STIBNITEMIN = NaturesMinerals.CONFIG.stibniteMinHeight;
-    private static int STIBNITEVEIN = NaturesMinerals.CONFIG.stibniteVeinSize;
-    private static int STIBNITECHUNK = NaturesMinerals.CONFIG.stibniteVeinsPerChunk;
+    private static int STIBNITEMAX = 256; //NaturesMinerals.CONFIG.stibniteMaxHeight; //256
+    private static int STIBNITEMIN = 0; //NaturesMinerals.CONFIG.stibniteMinHeight; //0
+    private static int STIBNITEVEIN = 3; //NaturesMinerals.CONFIG.stibniteVeinSize; //3
+    private static int STIBNITECHUNK = 4; //NaturesMinerals.CONFIG.stibniteVeinsPerChunk; //4
 
-    private static int ASTRITEMAX = NaturesMinerals.CONFIG.astriteMaxHeight;
-    private static int ASTRITEMIN = NaturesMinerals.CONFIG.astriteMinHeight;
-    private static int ASTRITEVEIN = NaturesMinerals.CONFIG.astriteVeinSize;
-    private static int ASTRITECHUNK = NaturesMinerals.CONFIG.astriteVeinsPerChunk;
+    private static int ASTRITEMAX = 256; //NaturesMinerals.CONFIG.astriteMaxHeight; //256
+    private static int ASTRITEMIN = 0; //NaturesMinerals.CONFIG.astriteMinHeight; //0
+    private static int ASTRITEVEIN = 3; //NaturesMinerals.CONFIG.astriteVeinSize; //3
+    private static int ASTRITECHUNK = 4; //NaturesMinerals.CONFIG.astriteVeinsPerChunk; //4
 
     public static void registerFeatures() {
         FeatureList.UVAROVITE_LIST = overworldOres(BlockList.UVAROVITE_ORE.getDefaultState(), BlockList.DEEPSLATE_UVAROVITE_ORE.getDefaultState());

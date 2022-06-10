@@ -50,7 +50,7 @@ public class ModAxeItem extends AxeItem {
                 }
             }
             if (mainStack.isOf(ItemList.STIBNITE_AXE)) {
-                if (world.getDimension().isUltrawarm()) {
+                if (world.getDimension().ultrawarm()) {
                     ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 0, 1, false, false, false));
                     ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 0, 2, false, false, false));
                 }

@@ -1,13 +1,13 @@
 package com.ianm1647.naturesminerals.item.equipment.tools;
 
 import com.ianm1647.naturesminerals.item.ItemList;
+//import draylar.magna.item.HammerItem;
 import draylar.magna.item.HammerItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
@@ -35,7 +35,7 @@ public class ModHammerItem extends HammerItem {
                 }
             }
             if (mainStack.isOf(ItemList.STIBNITE_HAMMER)) {
-                if (world.getDimension().isUltrawarm()) {
+                if (world.getDimension().ultrawarm()) {
                     ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 0, 1, false, false, false));
                 }
             }
