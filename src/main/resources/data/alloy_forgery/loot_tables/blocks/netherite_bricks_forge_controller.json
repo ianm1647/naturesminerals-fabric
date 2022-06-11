@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "alloy_forgery:netherite_block_forge_controller"
+          "name": "alloy_forgery:netherite_bricks_forge_controller"
         }
       ]
     }

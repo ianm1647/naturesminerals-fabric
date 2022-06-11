@@ -97,6 +97,7 @@
   "item.naturesminerals.thounite_legs": "Thounite Leggings",
   "item.naturesminerals.thounite_feet": "Thounite Boots",
 
+  "block.naturesminerals.netherite_bricks": "Netherite Bricks",
   "block.naturesminerals.scorched_coal_block": "Block of Scorched Coal",
   "block.naturesminerals.uvarovite_ore": "Uvarovite Ore",
   "block.naturesminerals.deepslate_uvarovite_ore": "Deepslate Uvarovite Ore",
@@ -114,7 +115,7 @@
   "block.naturesminerals.astrite_block": "Block of Astrite",
   "block.naturesminerals.thounite_block": "Block of Thounite",
 
-  "block.alloy_forgery.netherite_block_forge_controller": "Netherite Forge Controller",
+  "block.alloy_forgery.netherite_bricks_forge_controller": "Netherite Bricks Forge Controller",
   "block.alloy_forgery.astrite_block_forge_controller": "Astrite Forge Controller",
 
   "itemGroup.naturesminerals.group": "Nature's Minerals"

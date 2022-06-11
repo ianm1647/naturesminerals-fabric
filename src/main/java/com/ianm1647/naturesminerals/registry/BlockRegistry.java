@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.block.OreBlock;
 import net.minecraft.item.BlockItem;
@@ -18,6 +19,9 @@ import net.minecraft.util.registry.Registry;
 public class BlockRegistry {
 
     public static void registerBlocks() {
+        BlockList.NETHERITE_BRICKS = block("netherite_bricks",
+                new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
+
         BlockList.SCORCHED_COAL_BLOCK = block("scorched_coal_block",
                 new Block(blockSettings(Material.STONE, 2.0F, 3.0F, BlockSoundGroup.STONE)));
 

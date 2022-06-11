@@ -39,7 +39,7 @@ dependencies {
 	modCompileOnly "curse.maven:adapaxels-406691:${project.adapaxels_version}"
 
 	include "com.github.Draylar:magna:${project.magna_version}"
-	modCompileOnly("com.github.Draylar:magna:${project.magna_version}") {
+	modImplementation("com.github.Draylar:magna:${project.magna_version}") {
 		exclude group: "net.fabricmc"
 		exclude group: "com.jamieswhiteshirt"
 		exclude group: "me.shedaniel.cloth"

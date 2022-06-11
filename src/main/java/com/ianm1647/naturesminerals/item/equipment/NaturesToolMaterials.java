@@ -22,27 +22,27 @@ public enum NaturesToolMaterials implements ToolMaterial {
 
 
     private final int miningLevel;
-    private final int itemDurability;
-    private final float miningSpeed;
+    private final int durability;
+    private final float blockBreakSpeed;
     private final float attackDamage;
     private final int enchantability;
-    private final Lazy<Ingredient> repairIngredient;
+    private final Supplier<Ingredient> repairIngredient;
 
-    NaturesToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier repairIngredient) {
+    NaturesToolMaterials(int miningLevel, int durability, float blockBreakSpeed, float attackDamage, int enchantability, Supplier repairIngredient) {
         this.miningLevel = miningLevel;
-        this.itemDurability = itemDurability;
-        this.miningSpeed = miningSpeed;
+        this.durability = durability;
+        this.blockBreakSpeed = blockBreakSpeed;
         this.attackDamage = attackDamage;
         this.enchantability = enchantability;
-        this.repairIngredient = new Lazy(repairIngredient);
+        this.repairIngredient = repairIngredient;
     }
 
     public int getDurability() {
-        return this.itemDurability;
+        return this.durability;
     }
 
     public float getMiningSpeedMultiplier() {
-        return this.miningSpeed;
+        return this.blockBreakSpeed;
     }
 
     public float getAttackDamage() {
@@ -58,6 +58,6 @@ public enum NaturesToolMaterials implements ToolMaterial {
     }
 
     public Ingredient getRepairIngredient() {
-        return (Ingredient)this.repairIngredient.get();
+        return this.repairIngredient.get();
     }
 }

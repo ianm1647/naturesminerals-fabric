@@ -16,8 +16,8 @@ import java.util.function.Predicate;
 public class OreGeneration {
 
     public static void generateFeature() {
-        generateOre(BiomeSelectors.includeByKey(BiomeKeys.DESERT), FeatureList.UVAROVITE_ORE_PLACED.getKey().get());
-        generateOre(BiomeSelectors.includeByKey(BiomeKeys.SAVANNA, BiomeKeys.SAVANNA_PLATEAU), FeatureList.KUNZITE_ORE_PLACED.getKey().get());
+        generateOre(BiomeSelectors.tag(BiomeTags.IS_BADLANDS), FeatureList.UVAROVITE_ORE_PLACED.getKey().get());
+        generateOre(BiomeSelectors.tag(BiomeTags.IS_SAVANNA), FeatureList.KUNZITE_ORE_PLACED.getKey().get());
         generateOre(BiomeSelectors.tag(BiomeTags.IS_NETHER), FeatureList.STIBNITE_ORE_PLACED.getKey().get());
         generateOre(BiomeSelectors.tag(BiomeTags.IS_END), FeatureList.ASTRITE_ORE_PLACED.getKey().get());
 

@@ -3,6 +3,8 @@ package com.ianm1647.naturesminerals.block;
 import net.minecraft.block.Block;
 
 public class BlockList {
+    public static Block NETHERITE_BRICKS;
+
     public static Block SCORCHED_COAL_BLOCK;
 
     public static Block UVAROVITE_ORE;

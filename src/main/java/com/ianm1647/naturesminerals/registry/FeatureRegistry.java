@@ -21,12 +21,12 @@ public class FeatureRegistry {
     private static int UVARMAX = 20; //NaturesMinerals.CONFIG.uvaroviteMaxHeight;//20
     private static int UVARMIN = -20; //NaturesMinerals.CONFIG.uvaroviteMinHeight; //-20
     private static int UVARVEIN = 5; //NaturesMinerals.CONFIG.uvaroviteVeinSize; //5
-    private static int UVARCHUNK = 8; //NaturesMinerals.CONFIG.uvaroviteVeinsPerChunk; //8
+    private static int UVARCHUNK = 4; //NaturesMinerals.CONFIG.uvaroviteVeinsPerChunk; //8
 
     private static int KUNZITEMAX = -20; //NaturesMinerals.CONFIG.kunziteMaxHeight; //-20
     private static int KUNZITEMIN = -60; //NaturesMinerals.CONFIG.kunziteMinHeight; //-60
     private static int KUNZITEVEIN = 4; //NaturesMinerals.CONFIG.kunziteVeinSize; //4
-    private static int KUNZITECHUNK = 5; //NaturesMinerals.CONFIG.kunziteVeinsPerChunk; //5
+    private static int KUNZITECHUNK = 4; //NaturesMinerals.CONFIG.kunziteVeinsPerChunk; //5
 
     private static int STIBNITEMAX = 256; //NaturesMinerals.CONFIG.stibniteMaxHeight; //256
     private static int STIBNITEMIN = 0; //NaturesMinerals.CONFIG.stibniteMinHeight; //0
