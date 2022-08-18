@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 public class ModKnifeItem extends KnifeItem {
 
     public ModKnifeItem(ToolMaterial material, Settings settings) {
-        super(material, settings);
+        super(material);
     }
 
     @Override

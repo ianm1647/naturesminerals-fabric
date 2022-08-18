@@ -34,12 +34,12 @@ dependencies {
 
 	modImplementation "curse.maven:alloyforgery-438718:${project.alloyforgery_version}"
 
-	modCompileOnly "curse.maven:farmersdelightfabric-482834:${project.delight_version}"
+	modImplementation "curse.maven:farmersdelightfabric-482834:${project.delight_version}"
 
 	modCompileOnly "curse.maven:adapaxels-406691:${project.adapaxels_version}"
 
-	include "com.github.Draylar:magna:${project.magna_version}"
-	modImplementation("com.github.Draylar:magna:${project.magna_version}") {
+	include "com.github.PTOM76:magna:${project.magna_version}"
+	modImplementation("com.github.PTOM76:magna:${project.magna_version}") {
 		exclude group: "net.fabricmc"
 		exclude group: "com.jamieswhiteshirt"
 		exclude group: "me.shedaniel.cloth"
