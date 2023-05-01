@@ -7,14 +7,15 @@ import com.ianm1647.naturesminerals.item.equipment.NaturesArmorMaterials;
 import com.ianm1647.naturesminerals.item.equipment.NaturesToolMaterials;
 import com.ianm1647.naturesminerals.item.equipment.tools.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class ItemRegistry {
-    private static int durabilityMultiplier = NaturesMinerals.CONFIG.durabilityMultiplier;
+    //private static int durabilityMultiplier = NaturesMinerals.CONFIG.durabilityMultiplier;
 
     public static void registerItems() {
         ItemList.SCORCHED_COAL = item("scorched_coal");
@@ -78,41 +79,31 @@ public class ItemRegistry {
             ItemList.THOUNITE_KNIFE = knifeItem("thounite", NaturesToolMaterials.THOUNITE);
         }
 
-        //if (FabricLoader.getInstance().isModLoaded("vanilla-hammers")) {
+        if (FabricLoader.getInstance().isModLoaded("vanilla-hammers")) {
             ItemList.UVAROVITE_HAMMER = hammerItem("uvarovite", NaturesToolMaterials.UVAROVITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP)
-                            .maxDamage(NaturesToolMaterials.UVAROVITE.getDurability() * 5));//durabilityMultiplier));
+                    new FabricItemSettings().maxDamage(NaturesToolMaterials.UVAROVITE.getDurability() * 5));
             ItemList.KUNZITE_HAMMER = hammerItem("kunzite", NaturesToolMaterials.KUNZITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP)
-                            .maxDamage(NaturesToolMaterials.KUNZITE.getDurability() * 5));//durabilityMultiplier));
+                    new FabricItemSettings().maxDamage(NaturesToolMaterials.KUNZITE.getDurability() * 5));
             ItemList.STIBNITE_HAMMER = hammerItem("stibnite", NaturesToolMaterials.STIBNITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP)
-                            .maxDamage(NaturesToolMaterials.STIBNITE.getDurability() * 5));//durabilityMultiplier));
+                    new FabricItemSettings().maxDamage(NaturesToolMaterials.STIBNITE.getDurability() * 5));
             ItemList.ASTRITE_HAMMER = hammerItem("astrite", NaturesToolMaterials.ASTRITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP)
-                            .maxDamage(NaturesToolMaterials.ASTRITE.getDurability() * 5));//durabilityMultiplier));
+                    new FabricItemSettings().maxDamage(NaturesToolMaterials.ASTRITE.getDurability() * 5));
             ItemList.THOUNITE_HAMMER = hammerItem("thounite", NaturesToolMaterials.THOUNITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP)
-                            .maxDamage(NaturesToolMaterials.THOUNITE.getDurability() * 5));//durabilityMultiplier));
-        //}
+                    new FabricItemSettings().maxDamage(NaturesToolMaterials.THOUNITE.getDurability() * 5));
+        }
 
-        //if (FabricLoader.getInstance().isModLoaded("vanillaexcavators")) {
+        if (FabricLoader.getInstance().isModLoaded("vanillaexcavators")) {
             ItemList.UVAROVITE_EXCAVATOR = excavatorItem("uvarovite", NaturesToolMaterials.UVAROVITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP)
-                            .maxDamage(NaturesToolMaterials.UVAROVITE.getDurability() * 5));//durabilityMultiplier));
+                    new FabricItemSettings().maxDamage(NaturesToolMaterials.UVAROVITE.getDurability() * 5));
             ItemList.KUNZITE_EXCAVATOR = excavatorItem("kunzite", NaturesToolMaterials.KUNZITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP)
-                            .maxDamage(NaturesToolMaterials.KUNZITE.getDurability() * 5));//durabilityMultiplier));
+                    new FabricItemSettings().maxDamage(NaturesToolMaterials.KUNZITE.getDurability() * 5));
             ItemList.STIBNITE_EXCAVATOR = excavatorItem("stibnite", NaturesToolMaterials.STIBNITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP)
-                            .maxDamage(NaturesToolMaterials.STIBNITE.getDurability() * 5));//durabilityMultiplier));
+                    new FabricItemSettings().maxDamage(NaturesToolMaterials.STIBNITE.getDurability() * 5));
             ItemList.ASTRITE_EXCAVATOR = excavatorItem("astrite", NaturesToolMaterials.ASTRITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP)
-                            .maxDamage(NaturesToolMaterials.ASTRITE.getDurability() * 5));//durabilityMultiplier));
+                    new FabricItemSettings().maxDamage(NaturesToolMaterials.ASTRITE.getDurability() * 5));
             ItemList.THOUNITE_EXCAVATOR = excavatorItem("thounite", NaturesToolMaterials.THOUNITE,
-                    new FabricItemSettings().group(NaturesMinerals.GROUP)
-                            .maxDamage(NaturesToolMaterials.THOUNITE.getDurability() * 5));//durabilityMultiplier));
-        //}
+                    new FabricItemSettings().maxDamage(NaturesToolMaterials.THOUNITE.getDurability() * 5));
+        }
 
         if (FabricLoader.getInstance().isModLoaded("adapaxels")) {
             ItemList.UVAROVITE_PAXEL = paxelItem("uvarovite", NaturesToolMaterials.UVAROVITE);
@@ -122,89 +113,112 @@ public class ItemRegistry {
             ItemList.THOUNITE_PAXEL = paxelItem("thounite", NaturesToolMaterials.THOUNITE);
         }
 
-        ItemList.UVAROVITE_HEAD = armorItem("uvarovite_head", NaturesArmorMaterials.UVAROVITE, EquipmentSlot.HEAD);
-        ItemList.KUNZITE_HEAD = armorItem("kunzite_head", NaturesArmorMaterials.KUNZITE, EquipmentSlot.HEAD);
-        ItemList.STIBNITE_HEAD = armorItem("stibnite_head", NaturesArmorMaterials.STIBNITE, EquipmentSlot.HEAD);
-        ItemList.ASTRITE_HEAD = armorItem("astrite_head", NaturesArmorMaterials.ASTRITE, EquipmentSlot.HEAD);
-        ItemList.THOUNITE_HEAD = armorItem("thounite_head", NaturesArmorMaterials.THOUNITE, EquipmentSlot.HEAD);
+        ItemList.UVAROVITE_HEAD = armorItem("uvarovite_head", NaturesArmorMaterials.UVAROVITE, ArmorItem.Type.HELMET);
+        ItemList.KUNZITE_HEAD = armorItem("kunzite_head", NaturesArmorMaterials.KUNZITE, ArmorItem.Type.HELMET);
+        ItemList.STIBNITE_HEAD = armorItem("stibnite_head", NaturesArmorMaterials.STIBNITE, ArmorItem.Type.HELMET);
+        ItemList.ASTRITE_HEAD = armorItem("astrite_head", NaturesArmorMaterials.ASTRITE, ArmorItem.Type.HELMET);
+        ItemList.THOUNITE_HEAD = armorItem("thounite_head", NaturesArmorMaterials.THOUNITE, ArmorItem.Type.HELMET);
 
-        ItemList.UVAROVITE_CHEST = armorItem("uvarovite_chest", NaturesArmorMaterials.UVAROVITE, EquipmentSlot.CHEST);
-        ItemList.KUNZITE_CHEST = armorItem("kunzite_chest", NaturesArmorMaterials.KUNZITE, EquipmentSlot.CHEST);
-        ItemList.STIBNITE_CHEST = armorItem("stibnite_chest", NaturesArmorMaterials.STIBNITE, EquipmentSlot.CHEST);
-        ItemList.ASTRITE_CHEST = armorItem("astrite_chest", NaturesArmorMaterials.ASTRITE, EquipmentSlot.CHEST);
-        ItemList.THOUNITE_CHEST = armorItem("thounite_chest", NaturesArmorMaterials.THOUNITE, EquipmentSlot.CHEST);
+        ItemList.UVAROVITE_CHEST = armorItem("uvarovite_chest", NaturesArmorMaterials.UVAROVITE, ArmorItem.Type.CHESTPLATE);
+        ItemList.KUNZITE_CHEST = armorItem("kunzite_chest", NaturesArmorMaterials.KUNZITE, ArmorItem.Type.CHESTPLATE);
+        ItemList.STIBNITE_CHEST = armorItem("stibnite_chest", NaturesArmorMaterials.STIBNITE, ArmorItem.Type.CHESTPLATE);
+        ItemList.ASTRITE_CHEST = armorItem("astrite_chest", NaturesArmorMaterials.ASTRITE, ArmorItem.Type.CHESTPLATE);
+        ItemList.THOUNITE_CHEST = armorItem("thounite_chest", NaturesArmorMaterials.THOUNITE, ArmorItem.Type.CHESTPLATE);
 
-        ItemList.UVAROVITE_LEGS = armorItem("uvarovite_legs", NaturesArmorMaterials.UVAROVITE, EquipmentSlot.LEGS);
-        ItemList.KUNZITE_LEGS = armorItem("kunzite_legs", NaturesArmorMaterials.KUNZITE, EquipmentSlot.LEGS);
-        ItemList.STIBNITE_LEGS = armorItem("stibnite_legs", NaturesArmorMaterials.STIBNITE, EquipmentSlot.LEGS);
-        ItemList.ASTRITE_LEGS = armorItem("astrite_legs", NaturesArmorMaterials.ASTRITE, EquipmentSlot.LEGS);
-        ItemList.THOUNITE_LEGS = armorItem("thounite_legs", NaturesArmorMaterials.THOUNITE, EquipmentSlot.LEGS);
+        ItemList.UVAROVITE_LEGS = armorItem("uvarovite_legs", NaturesArmorMaterials.UVAROVITE, ArmorItem.Type.LEGGINGS);
+        ItemList.KUNZITE_LEGS = armorItem("kunzite_legs", NaturesArmorMaterials.KUNZITE, ArmorItem.Type.LEGGINGS);
+        ItemList.STIBNITE_LEGS = armorItem("stibnite_legs", NaturesArmorMaterials.STIBNITE, ArmorItem.Type.LEGGINGS);
+        ItemList.ASTRITE_LEGS = armorItem("astrite_legs", NaturesArmorMaterials.ASTRITE, ArmorItem.Type.LEGGINGS);
+        ItemList.THOUNITE_LEGS = armorItem("thounite_legs", NaturesArmorMaterials.THOUNITE, ArmorItem.Type.LEGGINGS);
 
-        ItemList.UVAROVITE_FEET = armorItem("uvarovite_feet", NaturesArmorMaterials.UVAROVITE, EquipmentSlot.FEET);
-        ItemList.KUNZITE_FEET = armorItem("kunzite_feet", NaturesArmorMaterials.KUNZITE, EquipmentSlot.FEET);
-        ItemList.STIBNITE_FEET = armorItem("stibnite_feet", NaturesArmorMaterials.STIBNITE, EquipmentSlot.FEET);
-        ItemList.ASTRITE_FEET = armorItem("astrite_feet", NaturesArmorMaterials.ASTRITE, EquipmentSlot.FEET);
-        ItemList.THOUNITE_FEET = armorItem("thounite_feet", NaturesArmorMaterials.THOUNITE, EquipmentSlot.FEET);
+        ItemList.UVAROVITE_FEET = armorItem("uvarovite_feet", NaturesArmorMaterials.UVAROVITE, ArmorItem.Type.BOOTS);
+        ItemList.KUNZITE_FEET = armorItem("kunzite_feet", NaturesArmorMaterials.KUNZITE, ArmorItem.Type.BOOTS);
+        ItemList.STIBNITE_FEET = armorItem("stibnite_feet", NaturesArmorMaterials.STIBNITE, ArmorItem.Type.BOOTS);
+        ItemList.ASTRITE_FEET = armorItem("astrite_feet", NaturesArmorMaterials.ASTRITE, ArmorItem.Type.BOOTS);
+        ItemList.THOUNITE_FEET = armorItem("thounite_feet", NaturesArmorMaterials.THOUNITE, ArmorItem.Type.BOOTS);
 
     }
 
     private static Item item(String name) {
-        return Registry.register(Registry.ITEM, new Identifier(NaturesMinerals.MODID, name),
-                new Item(new FabricItemSettings().group(NaturesMinerals.GROUP)));
+        Item item = Registry.register(Registries.ITEM, new Identifier(NaturesMinerals.MODID, name),
+                new Item(new FabricItemSettings()));
+        return item;
     }
 
     private static Item foodItem(String name, FoodComponent foodComponent) {
-        return Registry.register(Registry.ITEM, new Identifier(NaturesMinerals.MODID, name),
-                new Item(new FabricItemSettings().group(NaturesMinerals.GROUP).food(foodComponent)));
+        Item item = Registry.register(Registries.ITEM, new Identifier(NaturesMinerals.MODID, name),
+                new Item(new FabricItemSettings().food(foodComponent)));
+        ItemGroupEvents.modifyEntriesEvent(NaturesMinerals.GROUP).register(entries -> entries.add(item));
+        return item;
     }
 
     private static Item swordItem(String name, ToolMaterial material) {
-        return Registry.register(Registry.ITEM, new Identifier(NaturesMinerals.MODID, name + "_sword"),
-                new ModSwordItem(material, new FabricItemSettings().group(NaturesMinerals.GROUP)));
+        Item item = Registry.register(Registries.ITEM, new Identifier(NaturesMinerals.MODID, name + "_sword"),
+                new ModSwordItem(material, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(NaturesMinerals.GROUP).register(entries -> entries.add(item));
+        return item;
     }
 
     private static Item shovelItem(String name, ToolMaterial material) {
-        return Registry.register(Registry.ITEM, new Identifier(NaturesMinerals.MODID, name + "_shovel"),
-                new ModShovelItem(material, new FabricItemSettings().group(NaturesMinerals.GROUP)));
+        Item item = Registry.register(Registries.ITEM, new Identifier(NaturesMinerals.MODID, name + "_shovel"),
+                new ModShovelItem(material, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(NaturesMinerals.GROUP).register(entries -> entries.add(item));
+        return item;
     }
 
     private static Item pickaxeItem(String name, ToolMaterial material) {
-        return Registry.register(Registry.ITEM, new Identifier(NaturesMinerals.MODID, name + "_pickaxe"),
-                new ModPickaxeItem(material, new FabricItemSettings().group(NaturesMinerals.GROUP)));
+        Item item = Registry.register(Registries.ITEM, new Identifier(NaturesMinerals.MODID, name + "_pickaxe"),
+                new ModPickaxeItem(material, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(NaturesMinerals.GROUP).register(entries -> entries.add(item));
+        return item;
     }
 
     private static Item axeItem(String name, ToolMaterial material) {
-        return Registry.register(Registry.ITEM, new Identifier(NaturesMinerals.MODID, name + "_axe"),
-                new ModAxeItem(material, new FabricItemSettings().group(NaturesMinerals.GROUP)));
+        Item item = Registry.register(Registries.ITEM, new Identifier(NaturesMinerals.MODID, name + "_axe"),
+                new ModAxeItem(material, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(NaturesMinerals.GROUP).register(entries -> entries.add(item));
+        return item;
     }
 
     private static Item hoeItem(String name, ToolMaterial material) {
-        return Registry.register(Registry.ITEM, new Identifier(NaturesMinerals.MODID, name + "_hoe"),
-                new ModHoeItem(material, new FabricItemSettings().group(NaturesMinerals.GROUP)));
+        Item item = Registry.register(Registries.ITEM, new Identifier(NaturesMinerals.MODID, name + "_hoe"),
+                new ModHoeItem(material, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(NaturesMinerals.GROUP).register(entries -> entries.add(item));
+        return item;
     }
 
     private static Item hammerItem(String name, ToolMaterial material, Item.Settings settings) {
-        return Registry.register(Registry.ITEM, new Identifier(NaturesMinerals.MODID, name + "_hammer"),
+        Item item = Registry.register(Registries.ITEM, new Identifier(NaturesMinerals.MODID, name + "_hammer"),
                 new ModHammerItem(material, settings));
+        ItemGroupEvents.modifyEntriesEvent(NaturesMinerals.GROUP).register(entries -> entries.add(item));
+        return item;
     }
 
     private static Item excavatorItem(String name, ToolMaterial material, Item.Settings settings) {
-        return Registry.register(Registry.ITEM, new Identifier(NaturesMinerals.MODID, name + "_excavator"),
+        Item item = Registry.register(Registries.ITEM, new Identifier(NaturesMinerals.MODID, name + "_excavator"),
                 new ModExcavatorItem(material, settings));
+        ItemGroupEvents.modifyEntriesEvent(NaturesMinerals.GROUP).register(entries -> entries.add(item));
+        return item;
     }
 
     private static Item paxelItem(String name, ToolMaterial material) {
-        return Registry.register(Registry.ITEM, new Identifier(NaturesMinerals.MODID, name + "_paxel"),
-                new ModPaxelItem(material, new FabricItemSettings().group(NaturesMinerals.GROUP)));
+        Item item = Registry.register(Registries.ITEM, new Identifier(NaturesMinerals.MODID, name + "_paxel"),
+                new ModPaxelItem(material, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(NaturesMinerals.GROUP).register(entries -> entries.add(item));
+        return item;
     }
 
     private static Item knifeItem(String name, ToolMaterial material) {
-        return Registry.register(Registry.ITEM, new Identifier(NaturesMinerals.MODID, name + "_knife"),
-                new ModKnifeItem(material, new FabricItemSettings().group(NaturesMinerals.GROUP)));
+        Item item = Registry.register(Registries.ITEM, new Identifier(NaturesMinerals.MODID, name + "_knife"),
+                new ModKnifeItem(material, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(NaturesMinerals.GROUP).register(entries -> entries.add(item));
+        return item;
     }
 
-    public static Item armorItem(String name, ArmorMaterial material, EquipmentSlot slot) {
-        return Registry.register(Registry.ITEM, new Identifier(NaturesMinerals.MODID, name),
-                new ArmorItem(material, slot, new FabricItemSettings().group(NaturesMinerals.GROUP)));
+    public static Item armorItem(String name, ArmorMaterial material, ArmorItem.Type type) {
+        Item item = Registry.register(Registries.ITEM, new Identifier(NaturesMinerals.MODID, name),
+                new ArmorItem(material, type, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(NaturesMinerals.GROUP).register(entries -> entries.add(item));
+        return item;
     }
 }

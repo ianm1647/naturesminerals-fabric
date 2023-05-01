@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:blaze_rod"
+    },
+    "C": {
+      "item": "minecraft:coal"
+    },
+    "L": {
+      "item": "minecraft:lava_bucket"
+    }
+  },
+  "pattern": [
+    "BCB",
+    "CLC",
+    "BCB"
+  ],
+  "result": {
+    "item": "naturesminerals:scorched_coal"
+  },
+  "show_notification": true
+}

@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "com.ianm1647.naturesminerals.NaturesMinerals"
+    ],
+    "fabric-datagen": [
+      "com.ianm1647.naturesminerals.NaturesMineralsDataGen"
     ]
   },
 

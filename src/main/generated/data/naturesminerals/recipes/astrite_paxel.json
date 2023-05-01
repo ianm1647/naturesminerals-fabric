@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "naturesminerals:astrite_axe"
+    },
+    "P": {
+      "item": "naturesminerals:astrite_pickaxe"
+    },
+    "S": {
+      "item": "naturesminerals:astrite_shovel"
+    },
+    "T": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "APS",
+    " T ",
+    " T "
+  ],
+  "result": {
+    "item": "naturesminerals:astrite_paxel"
+  },
+  "show_notification": true
+}
