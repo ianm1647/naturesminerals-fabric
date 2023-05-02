@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "naturesminerals:netherite_bricks"
+        "recipe": "minecraft:netherite_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "naturesminerals:netherite_bricks"
+      "minecraft:netherite_bricks"
     ]
   }
 }

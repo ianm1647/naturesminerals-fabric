@@ -19,8 +19,8 @@ import java.util.List;
 public class ModConfiguredFeatures {
     private static int UVARVEIN = 5;
     private static int KUNZITEVEIN = 4;
-    private static int STIBNITEVEIN = 3;
-    private static int ASTRITEVEIN = 3;
+    private static int STIBNITEVEIN = 4;
+    private static int ASTRITEVEIN = 4;
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);

@@ -30,8 +30,9 @@ dependencies {
 
 	modCompileOnly "curse.maven:farmersdelightfabric-482834:${project.delight_version}"
 	modImplementation "curse.maven:adapaxels-406691:${project.adapaxels_version}"
-	include "com.github.Draylar:magna:${project.magna_version}"
-	modCompileOnly("com.github.Draylar:magna:${project.magna_version}") {
+
+	include "com.github.ianm1647:magna-1.19.4:${project.magna_version}"
+	modImplementation ("com.github.ianm1647:magna-1.19.4:${project.magna_version}") {
 		exclude group: "net.fabricmc"
 		exclude group: "com.jamieswhiteshirt"
 		exclude group: "me.shedaniel.cloth"

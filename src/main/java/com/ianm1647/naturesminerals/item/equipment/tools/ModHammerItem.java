@@ -1,7 +1,6 @@
 package com.ianm1647.naturesminerals.item.equipment.tools;
 
 import com.ianm1647.naturesminerals.item.ItemList;
-//import draylar.magna.item.HammerItem;
 import draylar.magna.item.HammerItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;

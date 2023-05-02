@@ -79,31 +79,57 @@ public class ItemRegistry {
             ItemList.THOUNITE_KNIFE = knifeItem("thounite", NaturesToolMaterials.THOUNITE);
         }
 
-        if (FabricLoader.getInstance().isModLoaded("vanilla-hammers")) {
-            ItemList.UVAROVITE_HAMMER = hammerItem("uvarovite", NaturesToolMaterials.UVAROVITE,
-                    new FabricItemSettings().maxDamage(NaturesToolMaterials.UVAROVITE.getDurability() * 5));
-            ItemList.KUNZITE_HAMMER = hammerItem("kunzite", NaturesToolMaterials.KUNZITE,
-                    new FabricItemSettings().maxDamage(NaturesToolMaterials.KUNZITE.getDurability() * 5));
-            ItemList.STIBNITE_HAMMER = hammerItem("stibnite", NaturesToolMaterials.STIBNITE,
-                    new FabricItemSettings().maxDamage(NaturesToolMaterials.STIBNITE.getDurability() * 5));
-            ItemList.ASTRITE_HAMMER = hammerItem("astrite", NaturesToolMaterials.ASTRITE,
-                    new FabricItemSettings().maxDamage(NaturesToolMaterials.ASTRITE.getDurability() * 5));
-            ItemList.THOUNITE_HAMMER = hammerItem("thounite", NaturesToolMaterials.THOUNITE,
-                    new FabricItemSettings().maxDamage(NaturesToolMaterials.THOUNITE.getDurability() * 5));
+        if (!FabricLoader.getInstance().isModLoaded("vanilla-hammers")) {
+            ItemList.WOODEN_HAMMER = vanillaHammerItem("wooden", ToolMaterials.WOOD,
+                    new FabricItemSettings().maxDamage(ToolMaterials.WOOD.getDurability() * 5));
+            ItemList.STONE_HAMMER = vanillaHammerItem("stone", ToolMaterials.STONE,
+                    new FabricItemSettings().maxDamage(ToolMaterials.STONE.getDurability() * 5));
+            ItemList.IRON_HAMMER = vanillaHammerItem("iron", ToolMaterials.IRON,
+                    new FabricItemSettings().maxDamage(ToolMaterials.IRON.getDurability() * 5));
+            ItemList.GOLDEN_HAMMER = vanillaHammerItem("golden", ToolMaterials.GOLD,
+                    new FabricItemSettings().maxDamage(ToolMaterials.GOLD.getDurability() * 5));
+            ItemList.DIAMOND_HAMMER = vanillaHammerItem("diamond", ToolMaterials.DIAMOND,
+                    new FabricItemSettings().maxDamage(ToolMaterials.DIAMOND.getDurability() * 5));
+            ItemList.NETHERITE_HAMMER = vanillaHammerItem("netherite", ToolMaterials.NETHERITE,
+                    new FabricItemSettings().maxDamage(ToolMaterials.NETHERITE.getDurability() * 5));
         }
 
-        if (FabricLoader.getInstance().isModLoaded("vanillaexcavators")) {
-            ItemList.UVAROVITE_EXCAVATOR = excavatorItem("uvarovite", NaturesToolMaterials.UVAROVITE,
-                    new FabricItemSettings().maxDamage(NaturesToolMaterials.UVAROVITE.getDurability() * 5));
-            ItemList.KUNZITE_EXCAVATOR = excavatorItem("kunzite", NaturesToolMaterials.KUNZITE,
-                    new FabricItemSettings().maxDamage(NaturesToolMaterials.KUNZITE.getDurability() * 5));
-            ItemList.STIBNITE_EXCAVATOR = excavatorItem("stibnite", NaturesToolMaterials.STIBNITE,
-                    new FabricItemSettings().maxDamage(NaturesToolMaterials.STIBNITE.getDurability() * 5));
-            ItemList.ASTRITE_EXCAVATOR = excavatorItem("astrite", NaturesToolMaterials.ASTRITE,
-                    new FabricItemSettings().maxDamage(NaturesToolMaterials.ASTRITE.getDurability() * 5));
-            ItemList.THOUNITE_EXCAVATOR = excavatorItem("thounite", NaturesToolMaterials.THOUNITE,
-                    new FabricItemSettings().maxDamage(NaturesToolMaterials.THOUNITE.getDurability() * 5));
+        if (!FabricLoader.getInstance().isModLoaded("vanillaexcavators")) {
+            ItemList.WOODEN_EXCAVATOR = vanillaExcavatorItem("wooden", ToolMaterials.WOOD,
+                    new FabricItemSettings().maxDamage(ToolMaterials.WOOD.getDurability() * 5));
+            ItemList.STONE_EXCAVATOR = vanillaExcavatorItem("stone", ToolMaterials.STONE,
+                    new FabricItemSettings().maxDamage(ToolMaterials.STONE.getDurability() * 5));
+            ItemList.IRON_EXCAVATOR = vanillaExcavatorItem("iron", ToolMaterials.IRON,
+                    new FabricItemSettings().maxDamage(ToolMaterials.IRON.getDurability() * 5));
+            ItemList.GOLDEN_EXCAVATOR = vanillaExcavatorItem("golden", ToolMaterials.GOLD,
+                    new FabricItemSettings().maxDamage(ToolMaterials.GOLD.getDurability() * 5));
+            ItemList.DIAMOND_EXCAVATOR = vanillaExcavatorItem("diamond", ToolMaterials.DIAMOND,
+                    new FabricItemSettings().maxDamage(ToolMaterials.DIAMOND.getDurability() * 5));
+            ItemList.NETHERITE_EXCAVATOR = vanillaExcavatorItem("netherite", ToolMaterials.NETHERITE,
+                    new FabricItemSettings().maxDamage(ToolMaterials.NETHERITE.getDurability() * 5));
         }
+
+        ItemList.UVAROVITE_HAMMER = hammerItem("uvarovite", NaturesToolMaterials.UVAROVITE,
+                new FabricItemSettings().maxDamage(NaturesToolMaterials.UVAROVITE.getDurability() * 5));
+        ItemList.KUNZITE_HAMMER = hammerItem("kunzite", NaturesToolMaterials.KUNZITE,
+                new FabricItemSettings().maxDamage(NaturesToolMaterials.KUNZITE.getDurability() * 5));
+        ItemList.STIBNITE_HAMMER = hammerItem("stibnite", NaturesToolMaterials.STIBNITE,
+                new FabricItemSettings().maxDamage(NaturesToolMaterials.STIBNITE.getDurability() * 5));
+        ItemList.ASTRITE_HAMMER = hammerItem("astrite", NaturesToolMaterials.ASTRITE,
+                new FabricItemSettings().maxDamage(NaturesToolMaterials.ASTRITE.getDurability() * 5));
+        ItemList.THOUNITE_HAMMER = hammerItem("thounite", NaturesToolMaterials.THOUNITE,
+                new FabricItemSettings().maxDamage(NaturesToolMaterials.THOUNITE.getDurability() * 5));
+
+        ItemList.UVAROVITE_EXCAVATOR = excavatorItem("uvarovite", NaturesToolMaterials.UVAROVITE,
+                new FabricItemSettings().maxDamage(NaturesToolMaterials.UVAROVITE.getDurability() * 5));
+        ItemList.KUNZITE_EXCAVATOR = excavatorItem("kunzite", NaturesToolMaterials.KUNZITE,
+                new FabricItemSettings().maxDamage(NaturesToolMaterials.KUNZITE.getDurability() * 5));
+        ItemList.STIBNITE_EXCAVATOR = excavatorItem("stibnite", NaturesToolMaterials.STIBNITE,
+                new FabricItemSettings().maxDamage(NaturesToolMaterials.STIBNITE.getDurability() * 5));
+        ItemList.ASTRITE_EXCAVATOR = excavatorItem("astrite", NaturesToolMaterials.ASTRITE,
+                new FabricItemSettings().maxDamage(NaturesToolMaterials.ASTRITE.getDurability() * 5));
+        ItemList.THOUNITE_EXCAVATOR = excavatorItem("thounite", NaturesToolMaterials.THOUNITE,
+                new FabricItemSettings().maxDamage(NaturesToolMaterials.THOUNITE.getDurability() * 5));
 
         if (FabricLoader.getInstance().isModLoaded("adapaxels")) {
             ItemList.UVAROVITE_PAXEL = paxelItem("uvarovite", NaturesToolMaterials.UVAROVITE);
@@ -142,6 +168,7 @@ public class ItemRegistry {
     private static Item item(String name) {
         Item item = Registry.register(Registries.ITEM, new Identifier(NaturesMinerals.MODID, name),
                 new Item(new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(NaturesMinerals.GROUP).register(entries -> entries.add(item));
         return item;
     }
 
@@ -194,10 +221,24 @@ public class ItemRegistry {
         return item;
     }
 
+    private static Item vanillaHammerItem(String name, ToolMaterial material, Item.Settings settings) {
+        Item item = Registry.register(Registries.ITEM, new Identifier(NaturesMinerals.MODID, name + "_hammer"),
+                new ModHammerItem(material, settings));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> entries.addBefore(Items.BUCKET, item));
+        return item;
+    }
+
     private static Item excavatorItem(String name, ToolMaterial material, Item.Settings settings) {
         Item item = Registry.register(Registries.ITEM, new Identifier(NaturesMinerals.MODID, name + "_excavator"),
                 new ModExcavatorItem(material, settings));
         ItemGroupEvents.modifyEntriesEvent(NaturesMinerals.GROUP).register(entries -> entries.add(item));
+        return item;
+    }
+
+    private static Item vanillaExcavatorItem(String name, ToolMaterial material, Item.Settings settings) {
+        Item item = Registry.register(Registries.ITEM, new Identifier(NaturesMinerals.MODID, name + "_excavator"),
+                new ModExcavatorItem(material, settings));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> entries.addBefore(Items.BUCKET, item));
         return item;
     }
 

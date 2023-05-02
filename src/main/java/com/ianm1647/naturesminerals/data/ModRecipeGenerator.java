@@ -4,11 +4,14 @@ import com.ianm1647.naturesminerals.block.BlockList;
 import com.ianm1647.naturesminerals.item.ItemList;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -22,7 +25,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ItemList.SCORCHED_COAL, RecipeCategory.DECORATIONS, BlockList.SCORCHED_COAL_BLOCK);
-        offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, BlockList.NETHERITE_BRICKS, Items.NETHERITE_INGOT);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ItemList.UVAROVITE_INGOT, RecipeCategory.DECORATIONS, BlockList.UVAROVITE_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ItemList.UVAROVITE_NUGGET, RecipeCategory.MISC, ItemList.UVAROVITE_INGOT,
                 "uvarovite_ingot_from_nugget", null, "uvarovite_nugget_from_ingot", null);
@@ -43,7 +45,15 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ItemList.THOUNITE_NUGGET, RecipeCategory.MISC, ItemList.THOUNITE_INGOT,
                 "thounite_ingot_from_nugget", null, "thounite_nugget_from_ingot", null);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ItemList.SCORCHED_COAL)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlockList.NETHERITE_BRICKS, 4)
+                .pattern("BB")
+                .pattern("BB")
+                .input('B', Items.NETHERITE_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(Items.NETHERITE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(Items.NETHERITE_INGOT))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(BlockList.NETHERITE_BRICKS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ItemList.SCORCHED_COAL, 4)
                 .pattern("BCB")
                 .pattern("CLC")
                 .pattern("BCB")
@@ -166,24 +176,62 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         craftPaxel(exporter, ItemList.ASTRITE_PAXEL, ItemList.ASTRITE_AXE, ItemList.ASTRITE_PICKAXE, ItemList.ASTRITE_SHOVEL);
         craftPaxel(exporter, ItemList.THOUNITE_PAXEL, ItemList.THOUNITE_AXE, ItemList.THOUNITE_PICKAXE, ItemList.THOUNITE_SHOVEL);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ItemList.WOODEN_HAMMER)
+                .pattern("BIB")
+                .pattern(" T ")
+                .pattern(" T ")
+                .input('B', ItemTags.LOGS)
+                .input('I', ItemTags.PLANKS)
+                .input('T', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(Items.OAK_PLANKS),
+                        FabricRecipeProvider.conditionsFromTag(ItemTags.PLANKS))
+                .criterion(FabricRecipeProvider.hasItem(Items.OAK_LOG),
+                        FabricRecipeProvider.conditionsFromTag(ItemTags.LOGS))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ItemList.WOODEN_HAMMER)));
+
+        craftHammer(exporter, ItemList.STONE_HAMMER, Items.STONE, Items.COBBLESTONE);
+        craftHammer(exporter, ItemList.IRON_HAMMER, Items.IRON_BLOCK, Items.IRON_INGOT);
+        craftHammer(exporter, ItemList.GOLDEN_HAMMER, Items.GOLD_BLOCK, Items.GOLD_INGOT);
+        craftHammer(exporter, ItemList.DIAMOND_HAMMER, Items.DIAMOND_BLOCK, Items.DIAMOND);
+        craftHammer(exporter, ItemList.NETHERITE_HAMMER, Items.NETHERITE_BLOCK, Items.NETHERITE_INGOT);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ItemList.WOODEN_EXCAVATOR)
+                .pattern(" I ")
+                .pattern("BTB")
+                .pattern(" T ")
+                .input('B', ItemTags.LOGS)
+                .input('I', ItemTags.PLANKS)
+                .input('T', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(Items.OAK_PLANKS),
+                        FabricRecipeProvider.conditionsFromTag(ItemTags.PLANKS))
+                .criterion(FabricRecipeProvider.hasItem(Items.OAK_LOG),
+                        FabricRecipeProvider.conditionsFromTag(ItemTags.LOGS))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ItemList.WOODEN_EXCAVATOR)));
+
+        craftExcavator(exporter, ItemList.STONE_EXCAVATOR, Items.STONE, Items.COBBLESTONE);
+        craftExcavator(exporter, ItemList.IRON_EXCAVATOR, Items.IRON_BLOCK, Items.IRON_INGOT);
+        craftExcavator(exporter, ItemList.GOLDEN_EXCAVATOR, Items.GOLD_BLOCK, Items.GOLD_INGOT);
+        craftExcavator(exporter, ItemList.DIAMOND_EXCAVATOR, Items.DIAMOND_BLOCK, Items.DIAMOND);
+        craftExcavator(exporter, ItemList.NETHERITE_EXCAVATOR, Items.NETHERITE_BLOCK, Items.NETHERITE_INGOT);
+
+        craftHammer(exporter, ItemList.UVAROVITE_HAMMER, BlockList.UVAROVITE_BLOCK.asItem(), ItemList.UVAROVITE_INGOT);
+        craftHammer(exporter, ItemList.KUNZITE_HAMMER, BlockList.KUNZITE_BLOCK.asItem(), ItemList.KUNZITE_INGOT);
+        craftHammer(exporter, ItemList.STIBNITE_HAMMER, BlockList.STIBNITE_BLOCK.asItem(), ItemList.STIBNITE_INGOT);
+        craftHammer(exporter, ItemList.ASTRITE_HAMMER, BlockList.ASTRITE_BLOCK.asItem(), ItemList.ASTRITE_INGOT);
+        craftHammer(exporter, ItemList.THOUNITE_HAMMER, BlockList.THOUNITE_BLOCK.asItem(), ItemList.THOUNITE_INGOT);
+
+        craftExcavator(exporter, ItemList.UVAROVITE_EXCAVATOR, BlockList.UVAROVITE_BLOCK.asItem(), ItemList.UVAROVITE_INGOT);
+        craftExcavator(exporter, ItemList.KUNZITE_EXCAVATOR, BlockList.KUNZITE_BLOCK.asItem(), ItemList.KUNZITE_INGOT);
+        craftExcavator(exporter, ItemList.STIBNITE_EXCAVATOR, BlockList.STIBNITE_BLOCK.asItem(), ItemList.STIBNITE_INGOT);
+        craftExcavator(exporter, ItemList.ASTRITE_EXCAVATOR, BlockList.ASTRITE_BLOCK.asItem(), ItemList.ASTRITE_INGOT);
+        craftExcavator(exporter, ItemList.THOUNITE_EXCAVATOR, BlockList.THOUNITE_BLOCK.asItem(), ItemList.THOUNITE_INGOT);
+
         /*
         craftKnife(exporter, ItemList.UVAROVITE_KNIFE, ItemList.UVAROVITE_INGOT);
         craftKnife(exporter, ItemList.KUNZITE_KNIFE, ItemList.KUNZITE_INGOT);
         craftKnife(exporter, ItemList.STIBNITE_KNIFE, ItemList.STIBNITE_INGOT);
         craftKnife(exporter, ItemList.ASTRITE_KNIFE, ItemList.ASTRITE_INGOT);
         craftKnife(exporter, ItemList.THOUNITE_KNIFE, ItemList.THOUNITE_INGOT);
-
-        craftHammer(exporter, ItemList.UVAROVITE_HAMMER, ItemList.UVAROVITE_INGOT, BlockList.UVAROVITE_BLOCK.asItem());
-        craftHammer(exporter, ItemList.KUNZITE_HAMMER, ItemList.KUNZITE_INGOT, BlockList.KUNZITE_BLOCK.asItem());
-        craftHammer(exporter, ItemList.STIBNITE_HAMMER, ItemList.STIBNITE_INGOT, BlockList.STIBNITE_BLOCK.asItem());
-        craftHammer(exporter, ItemList.ASTRITE_HAMMER, ItemList.ASTRITE_INGOT, BlockList.ASTRITE_BLOCK.asItem());
-        craftHammer(exporter, ItemList.THOUNITE_HAMMER, ItemList.THOUNITE_INGOT, BlockList.THOUNITE_BLOCK.asItem());
-
-        craftExcavator(exporter, ItemList.UVAROVITE_EXCAVATOR, ItemList.UVAROVITE_INGOT, BlockList.UVAROVITE_BLOCK.asItem());
-        craftExcavator(exporter, ItemList.KUNZITE_EXCAVATOR, ItemList.KUNZITE_INGOT, BlockList.KUNZITE_BLOCK.asItem());
-        craftExcavator(exporter, ItemList.STIBNITE_EXCAVATOR, ItemList.STIBNITE_INGOT, BlockList.STIBNITE_BLOCK.asItem());
-        craftExcavator(exporter, ItemList.ASTRITE_EXCAVATOR, ItemList.ASTRITE_INGOT, BlockList.ASTRITE_BLOCK.asItem());
-        craftExcavator(exporter, ItemList.THOUNITE_EXCAVATOR, ItemList.THOUNITE_INGOT, BlockList.THOUNITE_BLOCK.asItem());
          */
 
     }
@@ -318,5 +366,37 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(input3),
                         FabricRecipeProvider.conditionsFromItem(input3))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+    }
+
+    private void craftHammer(Consumer<RecipeJsonProvider> exporter, Item output, Item input1, Item input2) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output)
+                .pattern("BIB")
+                .pattern(" T ")
+                .pattern(" T ")
+                .input('B', input1)
+                .input('I', input2)
+                .input('T', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(input1),
+                        FabricRecipeProvider.conditionsFromItem(input1))
+                .criterion(FabricRecipeProvider.hasItem(input2),
+                        FabricRecipeProvider.conditionsFromItem(input2))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+
+    }
+
+    private void craftExcavator(Consumer<RecipeJsonProvider> exporter, Item output, Item input1, Item input2) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output)
+                .pattern(" I ")
+                .pattern("BTB")
+                .pattern(" T ")
+                .input('B', input1)
+                .input('I', input2)
+                .input('T', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(input1),
+                        FabricRecipeProvider.conditionsFromItem(input1))
+                .criterion(FabricRecipeProvider.hasItem(input2),
+                        FabricRecipeProvider.conditionsFromItem(input2))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+
     }
 }

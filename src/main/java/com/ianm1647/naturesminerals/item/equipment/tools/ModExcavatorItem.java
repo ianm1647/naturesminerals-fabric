@@ -7,13 +7,11 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ShovelItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
 public class ModExcavatorItem extends ExcavatorItem {
-
     public ModExcavatorItem(ToolMaterial material, Settings settings) {
         super(material, (int) 1.5F, -3.0F, settings);
     }

@@ -19,19 +19,19 @@ import java.util.List;
 public class ModPlacedFeatures {
     private static int UVARMAX = 10;
     private static int UVARMIN = -40;
-    private static int UVARCHUNK = 4;
+    private static int UVARCHUNK = 2;
 
     private static int KUNZITEMAX = -20;
     private static int KUNZITEMIN = -60;
-    private static int KUNZITECHUNK = 3;
+    private static int KUNZITECHUNK = 2;
 
     private static int STIBNITEMAX = 256;
     private static int STIBNITEMIN = 0;
-    private static int STIBNITECHUNK = 3;
+    private static int STIBNITECHUNK = 6;
 
     private static int ASTRITEMAX = 256;
     private static int ASTRITEMIN = 0;
-    private static int ASTRITECHUNK = 3;
+    private static int ASTRITECHUNK = 6;
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);

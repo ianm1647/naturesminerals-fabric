@@ -87,23 +87,8 @@ public class ItemList {
     public static Item GOLDEN_EXCAVATOR;
     public static Item DIAMOND_HAMMER;
     public static Item DIAMOND_EXCAVATOR;
-
-    //simply swords support
-    public static Item UVAROVITE_LONGSWORD;
-    public static Item UVAROVITE_TWINBLADE;
-    public static Item UVAROVITE_RAPIER;
-    public static Item UVAROVITE_KATANA;
-    public static Item UVAROVITE_SAI;
-    public static Item UVAROVITE_SPEAR;
-    public static Item UVAROVITE_GLAIVE;
-    public static Item UVAROVITE_WARGLAIVE;
-    public static Item UVAROVITE_CUTLASS;
-    public static Item UVAROVITE_CLAYMORE;
-    public static Item UVAROVITE_GREATHAMMER;
-    public static Item UVAROVITE_GREATAXE;
-    public static Item UVAROVITE_CHAKRAM;
-    public static Item UVAROVITE_SCYTHE;
-    public static Item UVAROVITE_HALBERD;
+    public static Item NETHERITE_HAMMER;
+    public static Item NETHERITE_EXCAVATOR;
 
     public static Item UVAROVITE_HEAD;
     public static Item UVAROVITE_CHEST;
