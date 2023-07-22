@@ -51,7 +51,7 @@ public class ModPlacedFeatures {
     }
 
     private static void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> config,
-                                       List<PlacementModifier> modifiers) {
+                                 List<PlacementModifier> modifiers) {
         context.register(key, new PlacedFeature(config, List.copyOf(modifiers)));
     }
 

@@ -17,7 +17,7 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlockList.UVAROVITE_ORE, oreDrops(BlockList.UVAROVITE_ORE, ItemList.RAW_UVAROVITE));
         addDrop(BlockList.DEEPSLATE_UVAROVITE_ORE, oreDrops(BlockList.DEEPSLATE_UVAROVITE_ORE, ItemList.RAW_UVAROVITE));
         addDrop(BlockList.KUNZITE_ORE, oreDrops(BlockList.KUNZITE_ORE, ItemList.RAW_KUNZITE));
-        addDrop(BlockList.DEEPSLATE_KUNZITE_ORE, oreDrops(BlockList.DEEPSLATE_KUNZITE_ORE, ItemList.RAW_UVAROVITE));
+        addDrop(BlockList.DEEPSLATE_KUNZITE_ORE, oreDrops(BlockList.DEEPSLATE_KUNZITE_ORE, ItemList.RAW_KUNZITE));
         addDrop(BlockList.STIBNITE_ORE, oreDrops(BlockList.STIBNITE_ORE, ItemList.RAW_STIBNITE));
         addDrop(BlockList.ASTRITE_ORE, oreDrops(BlockList.ASTRITE_ORE, ItemList.RAW_ASTRITE));
         addDrop(BlockList.UVAROVITE_BLOCK);
